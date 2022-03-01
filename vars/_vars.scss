@@ -1,0 +1,41 @@
+$gray: #888ea0;
+$darkgray: #686e7f;
+$red: #ff0032;
+$lighGray: #f2f3f7;
+$blue: #5d74b6;
+$deepBlue: #0032ff;
+$white: #fff;
+$main-p: 20px;
+$small-p: 15px;
+$header: 44px;
+$medium-header: 44px;
+$small-header: 28px;
+$big: 72px;
+.big__header {
+    font-size: $big;
+    color: $blue;
+    font-weight: 500;
+}
+
+.small__header {
+    font-size: $small-header;
+    color: $blue;
+    font-weight: 500;
+}
+
+.small__p {
+    color: $gray;
+    font-size: $small-p;
+    line-height: 1.6em;
+}
+
+.main__header {
+    font-size: $medium-header;
+    font-weight: 500;
+    color: $red;
+}
+
+.main__p {
+    font-size: $main-p;
+    color: $gray;
+}

@@ -1,0 +1,22 @@
+@import './vars/vars';
+@import './vars/flexCenter';
+@import './vars/grid';
+@import './vars/btn';
+@import './vars/footer';
+@import './vars/ocean';
+@import './vars/wave';
+@import './vars/fonts';
+@import './vars/reset';
+#about__header {
+    @include flexCenter(center, none);
+    .container {
+        display: flex;
+        justify-content: space-between;
+        .big__p {
+            flex: 40%;
+        }
+        .big__header {
+            flex-shrink: 60%;
+        }
+    }
+}

@@ -7,6 +7,7 @@ $deepBlue: #0032ff;
 $white: #fff;
 $main-p: 20px;
 $small-p: 15px;
+$big-p: 36px;
 $header: 44px;
 $medium-header: 44px;
 $small-header: 28px;
@@ -15,27 +16,44 @@ $big: 72px;
     font-size: $big;
     color: $blue;
     font-weight: 500;
+    font-family: 'Fredoka', sans-serif;
 }
 
 .small__header {
     font-size: $small-header;
     color: $blue;
     font-weight: 500;
+    font-family: 'Fredoka', sans-serif;
 }
 
 .small__p {
     color: $gray;
     font-size: $small-p;
     line-height: 1.6em;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.big__p {
+    color: $gray;
+    font-size: $big-p;
+    font-family: 'Fredoka', sans-serif;
 }
 
 .main__header {
     font-size: $medium-header;
     font-weight: 500;
     color: $red;
+    font-family: 'Fredoka', sans-serif;
 }
 
 .main__p {
     font-size: $main-p;
     color: $gray;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.span {
+    font-family: 'Fredoka', sans-serif;
+    color: $blue;
+    font-weight: 500;
 }

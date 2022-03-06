@@ -1,22 +1,138 @@
-@import './vars/vars';
-@import './vars/flexCenter';
-@import './vars/grid';
-@import './vars/btn';
-@import './vars/footer';
-@import './vars/ocean';
-@import './vars/wave';
-@import './vars/fonts';
-@import './vars/reset';
+@import "./vars/vars";
+@import "./vars/flexCenter";
+@import "./vars/grid";
+@import "./vars/btn";
+@import "./vars/footer";
+@import "./vars/ocean";
+@import "./vars/wave";
+@import "./vars/fonts";
+@import "./vars/reset";
 #about__header {
-    @include flexCenter(center, none);
-    .container {
-        display: flex;
-        justify-content: space-between;
-        .big__p {
-            flex: 40%;
-        }
-        .big__header {
-            flex-shrink: 60%;
-        }
-    }
+     @include flexCenter(center, none);
+     position: relative;
+     .container {
+          display: flex;
+          justify-content: space-between;
+          margin: 50px 0;
+          .big__p {
+               flex: 40%;
+          }
+          .big__header {
+               flex-shrink: 60%;
+          }
+     }
+}
+
+.wave {
+     position: absolute;
+     bottom: -400px;
+}
+
+article.container {
+     margin: 100px auto 50px auto;
+}
+
+#gallery {
+     @include flexCenter(center, none);
+     position: relative;
+     .container {
+          @include flexCenter(center, none);
+          .gallery__box {
+               @include grid(4, 0);
+               grid-row-gap: 70px;
+               .swiper-slide {
+                    img {
+                         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+                              rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+                         position: relative;
+                         height: 500px;
+                         width: 330px;
+                         object-fit: cover;
+                         border-radius: 10px;
+                         z-index: 1;
+                         transition: 0.3s ease;
+                         &:hover {
+                              img {
+                                   transform: scale(1.1);
+                              }
+                         }
+                         //  &::before {
+                         //       content: "";
+                         //       position: absolute;
+                         //       top: 0;
+                         //       left: 0;
+                         //       width: 100%;
+                         //       height: 100%;
+                         //       box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px
+                         //                 inset,
+                         //            rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+                         //       z-index: 998;
+                         //  }
+                    }
+                    .small__header {
+                         z-index: 999;
+                    }
+               }
+          }
+     }
+}
+
+#gaming {
+     @include flexCenter(center, none);
+     margin: 200px 0;
+     .container {
+          @include grid(2, none);
+          place-items: center;
+          position: relative;
+          .left__content {
+               .big__header {
+                    margin: 30px 0;
+               }
+          }
+          .right__content {
+               position: relative;
+               .img__content {
+                    .steam {
+                         position: relative;
+                         width: 100%;
+                         clip-path: polygon(
+                              70% 0,
+                              100% 0,
+                              100% 100%,
+                              100% 100%,
+                              20% 100%
+                         );
+
+                         animation: smooth 2s ease infinite alternate;
+                    }
+                    .gun {
+                         position: absolute;
+                         bottom: -10%;
+                         right: 0;
+                         filter: drop-shadow(
+                              0 20px 15px rgba(255, 100, 255, 0.7)
+                         );
+                         animation: shake 2s ease infinite alternate;
+                    }
+               }
+          }
+     }
+}
+
+@keyframes smooth {
+     from {
+          clip-path: polygon(95% 0, 100% 0, 100% 100%, 100% 100%, 45% 100%);
+     }
+     to {
+          clip-path: polygon(70% 0, 100% 0, 100% 100%, 100% 100%, 20% 100%);
+     }
+}
+
+@keyframes shake {
+     from {
+          transform: translateY(10px) rotate(0deg);
+     }
+     to {
+          transform: translateY(-10px) rotate(10deg);
+     }
 }

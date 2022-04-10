@@ -136,3 +136,19 @@ article.container {
           transform: translateY(-10px) rotate(10deg);
      }
 }
+
+@media (max-width: 1400px) {
+     .gallery__box {
+          @include grid(4, 0);
+          gap: 30px !important;
+          .swiper-slide {
+               height: 300px !important;
+               width: 220px !important;
+
+               img {
+                    height: 300px !important;
+                    width: 220px !important;
+               }
+          }
+     }
+}

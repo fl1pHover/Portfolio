@@ -526,7 +526,7 @@
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
-  z-index: 999;
+  z-index: -1;
 }
 
 * {
@@ -614,22 +614,22 @@ body video {
   border: 2px solid #ff0032;
 }
 
-.fixed__button:hover .down__button {
+.fixed__button:hover .up__button {
   color: #ff0032;
 }
 
-.fixed__button .down__button {
+.fixed__button .up__button {
   position: absolute;
   font-size: 23px;
   color: #686e7f;
-  -webkit-animation: down 1.5s ease infinite;
-          animation: down 1.5s ease infinite;
+  -webkit-animation: up 1.5s ease infinite;
+          animation: up 1.5s ease infinite;
 }
 
-@-webkit-keyframes down {
+@-webkit-keyframes up {
   0% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
     opacity: 0;
   }
   50% {
@@ -638,16 +638,16 @@ body video {
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
     opacity: 0;
   }
 }
 
-@keyframes down {
+@keyframes up {
   0% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
     opacity: 0;
   }
   50% {
@@ -656,8 +656,8 @@ body video {
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
     opacity: 0;
   }
 }
@@ -706,6 +706,7 @@ body video {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 9999;
 }
 
 #navbar .navbar__container {
@@ -1379,6 +1380,20 @@ a {
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width: 1400px) {
+  .container {
+    width: 950px;
+  }
+  #skill .container .skill__box {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 100px;
+  }
+  #header .container .fl1p {
+    width: 660px;
   }
 }
 /*# sourceMappingURL=style.css.map */
